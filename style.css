@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Logo Styles */
+#logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#logo img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+#logo img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #logo img {
+        width: 120px;
+    }
+}
+
+/* Body */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Banner */
+.banner {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top:10px;
+}
+
+.btn:hover {
+    color: #f39c12;
+}
+
+/* Cars Section */
+#cars {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.car_list {
+    justify-content: space-around;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space: nowrap; 
+}
+
+.car_item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 30%;
+    text-align: center;
+    display:inline-block;
+    margin-bottom:20px;
+    margin-left:20px;
+}
+
+.car_item img {
+    max-width: 100%;
+}
+
+.car_item h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.car_item p {
+    color: #f39c12;
+    font-size: 18px;
+}
+
+#cars h2 {
+    padding-bottom:20px;
+}
+
+.tag {
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
+    top:-340px;
+    left:-110px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Reservation Form and Return Form */
+#reservation, #returning {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Contact section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 5px solid #f39c12;
+}
+
+#contact h2 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom:10px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.contact-details {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    font-family: "Arial", sans-serif;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Login Page Styling */
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+    background-color: #f0f0f0;
+}
+
+.login_container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login_container h2 {
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login_form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #333;
+}
+
+#login_form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login_container p {
+    margin-top: 10px;
+}
+
+.login_container a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.login_container a:hover {
+    text-decoration: underline;
+}

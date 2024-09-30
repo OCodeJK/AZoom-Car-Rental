@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning - AZoom Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cars">Cars</a></li>
+                <li><a href="index.html#reservation">Reservation</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#contact">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home"></section>
+        <div class="banner">
+            <h1>Returning a Car?</h1>
+            <p>Just follow this few steps.</p>
+        </div>
+    </section>
+
+    <section id="returning">
+        <h2>Returning of Cars</h2>
+        <form id="returning_form" method="#">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="car_park">Pick a Carpark:</label>
+            <select id="car_park" name="car_park">
+                <option value="car_park1">Car Park 1</option>
+                <option value="car_park2">Car Park 2</option>
+                <option value="car_park3">Car Park 3</option>
+            </select>
+
+            <button type="submit" class="btn">Submit Return Form</button>
+        </form>
+        
+    </section>
+
+    <section id="contact">
+        <h2>Want to Reserve Upfront?</h2>
+        <p>Branch 1 Rental Office: 123 Dover #10-576</p>
+        <p>Branch 2 Rental Office: 456 Clementi #90-765</p>
+        <br>
+        <h2>Feedback here:</h2>
+        <p>Email: <a href="mailto:AZoomecar@hotmail.com">AZoomecar@hotmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+</body>
+</html>

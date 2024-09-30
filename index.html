@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="returning.html">Returning</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#contact">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <h1>Welcome to AZoom Car Rental</h1>
+            <p>Your trusted partner for eco-friendly electric cars.</p>
+            <a href="#reservation" class="btn">Reserve Now</a>
+        </div>
+    </section>
+
+    <section id="cars">
+        <h2>Our Electric Cars</h2>
+        <div class="car_list">
+            <div class="car_item">
+                <img src="resources/images/tesla_m3.png"  alt="Electric Car 1">
+                <h3>Tesla Model 3</h3>
+                <p>Starting at $50/day</p>
+            </div>
+
+            <div class="car_item">
+                <img src="resources/images/nissan_leaf.jpg"  alt="Electric Car 2">
+                <h3>Nissan Leaf</h3>
+                <p>Starting at $40/day</p>
+            </div>
+            
+            <div class="car_item">
+                <img src="resources/images/chevrolet_bolt.png"  alt="Electric Car 3"><span class="tag">POPULAR</span>
+                <h3>Chevrolet Bolt</h3>
+                <p>Starting at $45/day</p>
+            </div>
+
+            <div class="car_item">
+                <img src="resources/images/chevrolet_bolt.png"  alt="Electric Car 4">
+                <h3>Chevrolet Bolt</h3>
+                <p>Starting at $45/day</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation">
+        <h2>Reserve Your Car</h2>
+        <form id="reservation_form" method="#">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="car_select">Choose a Car:</label>
+            <select id="car_select" name="car_select">
+                <option value="Tesla Model 3">Tesla Model 3</option>
+                <option value="Nissan Leaf">Nissan Leaf</option>
+                <option value="Chevrolet Bolt">Chevrolet Bolt</option>
+            </select>
+
+            <label for="rental_period">Rental Period:</label>
+            <select id="rental_period" name="rental_period">
+                <option value="1-day">1 Day</option>
+                <option value="1-week">1 Week</option>
+                <option value="1-month">1 Month</option>
+            </select>
+
+            <label for="credit_card">Credit Card Number:</label>
+            <input type="text" id="credit_card" name="credit_card" required>
+
+            <button type="submit" class="btn">Submit Reservation</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Want to Reserve Upfront?</h2>
+        <p>Branch 1 Rental Office: 123 Dover #10-576</p>
+        <p>Branch 2 Rental Office: 456 Clementi #90-765</p>
+        <br>
+        <h2>Feedback here:</h2>
+        <p>Email: <a href="mailto:AZoomecar@hotmail.com">AZoomecar@hotmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("reservation_form").addEventListener("submit", function (event) {
+            const creditCard = document.getElementById("credit_card").value;
+
+            if (!validateCreditCard(creditCard)) {
+                alert("Please enter a valid credit card number.");
+                event.preventDefault(); // Prevent form submission
+            }
+            else {
+                alert("Thank you for reserving with us!");
+            }
+
+        });
+
+
+        function validateCreditCard(cardNumber) {
+            // Basic validation for a 16-digit credit card number
+            const regex = /^[0-9]{16}$/;
+            return regex.test(cardNumber);
+        }
+    </script>
+</body>
+
+</html>

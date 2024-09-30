@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - AZoom Car Rental</title>
+    <link rel="stylesheet" href="style.css" />
+   
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cars">Cars</a></li>
+                <li><a href="index.html#reservation">Reservation</a></li>
+                <li><a href="returning.html">Returning</a></li>
+                <li><a href="#contact">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="login">
+        <div class="login_container">
+            <h2>Login to AZoom</h2>
+            <form id="login_form" method="#">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+                <br>
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Want to Reserve Upfront?</h2>
+        <p>Branch 1 Rental Office: 123 Dover #10-576</p>
+        <p>Branch 2 Rental Office: 456 Clementi #90-765</p>
+        <br>
+        <h2>Feedback here:</h2>
+        <p>Email: <a href="mailto:AZoomecar@hotmail.com">AZoomecar@hotmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("login_form").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email && password) {
+                alert("Login Successful!");
+            } else {
+                alert("Error, try again");
+            }
+        });
+    </script>
+</body>
+
+</html>
