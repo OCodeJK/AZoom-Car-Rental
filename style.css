@@ -8,6 +8,26 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 1.5em;
+}
+
+::-webkit-scrollbar-track{
+    background: hsl(39, 100%, 66%);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: hsl(39, 100%, 35%);
+    border: .25em solid hsl(39, 100%, 66%);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(42, 100%, 27%);
+}
+
 /* Logo Styles */
 #logo {
     text-align: center;
@@ -133,6 +153,7 @@ nav ul li a:hover {
     overflow-x:scroll;
     overflow-y:hidden;
     white-space: nowrap; 
+    
 }
 
 .car_item {
@@ -145,6 +166,13 @@ nav ul li a:hover {
     display:inline-block;
     margin-bottom:20px;
     margin-left:20px;
+    animation: scroll_right 15s linear infinite;
+    perspective: 700px;
+}
+
+@keyframes scroll_right {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }
 
 @media screen and (max-width: 768px) {
@@ -155,6 +183,10 @@ nav ul li a:hover {
 
 .car_item img {
     max-width: 100%;
+}
+
+.car_item img:hover {
+    transform: translateZ(20px);
 }
 
 .car_item h3 {
