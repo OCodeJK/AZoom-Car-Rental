@@ -7,7 +7,7 @@ Assignment 2 Marking Criteria:
 The website must implement functions of:
 - [x] Customer reserves car – via the AZoom Car Rental website using a credit card
 - [x] Customer rents car at the AZoom Car Rental office
-- [ ] Customer returns car at a designed car park
+- [x] Customer returns car at a designed car park
 - [ ] Employee of AZoom Car Rental inspects and update status of the returned car – to ensure no damages
 - [ ] Customer pays final bill – cost of rental and including any damages found
 
