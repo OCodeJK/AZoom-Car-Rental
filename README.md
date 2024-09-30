@@ -21,7 +21,7 @@ You can earn extra credits by implementing some or all of the following:
 - [x] Implementation of creative features on the website
 - [ ] Good design consideration written in Review Report
 - [ ] Good video presentation and quality of communication
-- [ ] Other creative elements
+- [x] Other creative elements
 
 In short - Marking Criteria:
 1. Functional implementation of Website for the Car Rental company
