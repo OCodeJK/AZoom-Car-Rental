@@ -5,11 +5,11 @@ Assignment 2 Marking Criteria:
 1. Basic Design and Implementation of AZoom Website (HTML, CSS, JavaScript)
 
 The website must implement functions of:
-- Customer reserves car – via the AZoom Car Rental website using a credit card
-- Customer rents car at the AZoom Car Rental office
-- Customer returns car at a designed car park
-- Employee of AZoom Car Rental inspects and update status of the returned car – to ensure no damages
-- Customer pays final bill – cost of rental and including any damages found
+- [ ] Customer reserves car – via the AZoom Car Rental website using a credit card
+- [ ] Customer rents car at the AZoom Car Rental office
+- [ ] Customer returns car at a designed car park
+- [ ] Employee of AZoom Car Rental inspects and update status of the returned car – to ensure no damages
+- [ ] Customer pays final bill – cost of rental and including any damages found
 
 Note: not required to write Backend Database storage or interaction code. Frontend code can show interaction based on data pre-stored on JavaScript array.
 
