@@ -176,12 +176,14 @@ nav ul li a:hover {
 
 .tag {
     font-size: 16px;
-    padding: 10px;
+    padding: 8px;
+    top:10px;
     position: relative;
     text-align: center;
     border-radius: 20px;
     background-color: #ff9800;
     color: white;
+    font-weight:bold;
 }
 
 @media screen and (max-width: 820px) {
