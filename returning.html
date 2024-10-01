@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Returning - AZoom Car Rental</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -14,6 +16,16 @@
         <div id="logo">
             <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
         </div>
+
+        <div id="hamburger_icon">
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"
+                    style="font-size:70px; color:white"></i></a>
+        </div>
+        <div id="cross_icon" class="hidden">
+            <a href="javascript:void(0);" class="icon" onclick="cross()"><i class="fa fa-close"
+                    style="font-size:70px; color:white;"></i></a>
+        </div>
+
         <nav>
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
@@ -26,10 +38,10 @@
     </header>
 
     <section id="home"></section>
-        <div class="banner">
-            <h1>Returning a Car?</h1>
-            <p>Just follow this few steps.</p>
-        </div>
+    <div class="banner">
+        <h1>Returning a Car?</h1>
+        <p>Just follow this few steps.</p>
+    </div>
     </section>
 
     <section id="returning">
@@ -50,7 +62,7 @@
 
             <button type="submit" class="btn">Submit Return Form</button>
         </form>
-        
+
     </section>
 
     <section id="contact">
@@ -65,5 +77,34 @@
     <footer>
         <p>&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
+
+    <script>
+        function hamburger() {
+            var links = document.getElementById("links");
+            var hamburger = document.getElementById("hamburger_icon");
+            var cross = document.getElementById("cross_icon");
+
+            if (links.style.display === "block") {
+                links.style.display = "none";
+            }
+            else {
+                links.style.display = "block";
+                hamburger.style.display = "none";
+                cross.style.display = "block";
+            }
+        }
+        function cross() {
+            var cross = document.getElementById("cross_icon");
+            var hamburger = document.getElementById("hamburger_icon");
+            var links = document.getElementById("links");
+
+            if (cross.style.display === "block") {
+                cross.style.display = "none";
+                hamburger.style.display = "block";
+                links.style.display = "none";
+            }
+        }
+    </script>
 </body>
+
 </html>

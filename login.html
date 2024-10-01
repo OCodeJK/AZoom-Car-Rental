@@ -7,6 +7,7 @@
     <title>Login - AZoom Car Rental</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,6 +16,16 @@
         <div id="logo">
             <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
         </div>
+
+        <div id="hamburger_icon">
+        <a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"
+                style="font-size:70px; color:white"></i></a>
+        </div>
+        <div id="cross_icon" class="hidden">
+            <a href="javascript:void(0);" class="icon" onclick="cross()"><i class="fa fa-close"
+                    style="font-size:70px; color:white;"></i></a>
+        </div>
+
         <nav>
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
@@ -57,7 +68,7 @@
     <footer>
         <p>&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
-    
+
     <script>
         document.getElementById("login_form").addEventListener("submit", function (event) {
 
@@ -71,6 +82,32 @@
                 alert("Error, try again");
             }
         });
+
+        function hamburger() {
+            var links = document.getElementById("links");
+            var hamburger = document.getElementById("hamburger_icon");
+            var cross = document.getElementById("cross_icon");
+
+            if (links.style.display === "block") {
+                links.style.display = "none";
+            }
+            else {
+                links.style.display = "block";
+                hamburger.style.display = "none";
+                cross.style.display = "block";
+            }
+        }
+        function cross() {
+            var cross = document.getElementById("cross_icon");
+            var hamburger = document.getElementById("hamburger_icon");
+            var links = document.getElementById("links");
+
+            if (cross.style.display === "block") {
+                cross.style.display = "none";
+                hamburger.style.display = "block";
+                links.style.display = "none";
+            }
+        }
     </script>
 </body>
 
