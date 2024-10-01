@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZoom Car Rental</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
 </head>
 
@@ -16,14 +16,18 @@
         <div id="logo">
             <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
         <nav>
-            <ul>
+            <ul id="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#cars">Cars</a></li>
                 <li><a href="returning.html">Returning</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="#contact">About Us</a></li>
             </ul>
+            
         </nav>
     </header>
 
@@ -130,6 +134,15 @@
             // Basic validation for a 16-digit credit card number
             const regex = /^[0-9]{16}$/;
             return regex.test(cardNumber);
+        }
+
+        function myFunction(){
+            var x = document.getElementById("links");
+            if (x.style.display ==="block"){
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
         }
     </script>
 </body>

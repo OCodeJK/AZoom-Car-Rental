@@ -84,20 +84,39 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
     color: #f39c12;
 }
 
-@media screen and (max-width: 430px) {
-    nav ul li {
-        margin:6px;
+.icon {
+    background: black;
+    color:white;
+    display:block;
+    position:absolute;
+    right:0px;
+    top:110px;
+    padding:20px;
+    width:auto;
+    height:auto;
+}
+
+
+@media screen and (min-width: 1600px) {
+    .icon {
+        display:none;
     }
-    nav ul li a {
-        font-size: 16px;
-        font-weight: bold;
+}
+
+
+@media screen and (max-width: 430px) {
+    #links {
+        display:none;
+    }
+    #links a {
+        display:block;
     }
 }
 
