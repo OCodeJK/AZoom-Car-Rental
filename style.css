@@ -34,6 +34,7 @@ html {
     margin: 20px 0;
 }
 
+
 #logo img {
     width: 150px;
     height: auto;
@@ -45,11 +46,7 @@ html {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    #logo img {
-        width: 120px;
-    }
-}
+
 
 /* Body */
 body {
@@ -91,32 +88,21 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-.icon {
-    background: black;
-    color:white;
-    display:block;
-    position:absolute;
-    right:0px;
-    top:110px;
-    padding:20px;
-    width:auto;
-    height:auto;
-}
 
-
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 768px) {
     .icon {
-        display:none;
+        display: none;
     }
 }
 
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 760px) {
     #links {
         display:none;
     }
     #links a {
         display:block;
+        border-bottom: 2px solid lightgrey;
+        border-radius: 25px;
     }
 }
 
@@ -379,4 +365,8 @@ footer {
 
 .login_container a:hover {
     text-decoration: underline;
+}
+
+.hidden {
+    display:none;
 }
