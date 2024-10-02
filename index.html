@@ -29,9 +29,8 @@
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#cars">Cars</a></li>
-                <li><a href="returning.html">Returning</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#about_container">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -48,66 +47,59 @@
         <h2>Our Electric Cars</h2>
         <div class="car_list">
             <div class="car_item">
-                <img src="resources/images/tesla_m3.png" alt="Electric Car 1">
-                <h3>Tesla Model 3</h3>
-                <p>Starting at $50/day</p>
-                <br>
+                <a href="login.html">
+                    <img src="resources/images/tesla_m3.png" alt="Electric Car 1">
+                    <h3>Tesla Model 3</h3>
+                    <p>Starting at $50/day</p>
+                    <br>
+                </a>
             </div>
 
             <div class="car_item">
-                <img src="resources/images/nissan_leaf.jpg" alt="Electric Car 2">
-                <h3>Nissan Leaf</h3>
-                <p>Starting at $40/day</p>
-                <br>
+                <a href="login.html">
+                    <img src="resources/images/nissan_leaf.jpg" alt="Electric Car 2">
+                    <h3>Nissan Leaf</h3>
+                    <p>Starting at $40/day</p>
+                    <br>
+                </a>
             </div>
 
             <div class="car_item">
-                <img src="resources/images/chevrolet_bolt.png" alt="Electric Car 3">
-                <h3>Chevrolet Bolt</h3>
-                <p>Starting at $45/day</p>
-                <span class="tag">POPULAR</span>
+                <a href="login.html">
+                    <img src="resources/images/chevrolet_bolt.png" alt="Electric Car 3">
+                    <h3>Chevrolet Bolt</h3>
+                    <p>Starting at $45/day</p>
+                    <span class="tag">POPULAR</span>
+                </a>
             </div>
 
             <div class="car_item">
-                <img src="resources/images/chevrolet_bolt.png" alt="Electric Car 4">
-                <h3>Chevrolet Bolt</h3>
-                <p>Starting at $45/day</p>
-                <br>
+                <a href="login.html">
+                    <img src="resources/images/chevrolet_bolt.png" alt="Electric Car 4">
+                    <h3>Chevrolet Bolt</h3>
+                    <p>Starting at $45/day</p>
+                    <br>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="reservation">
-        <h2>Reserve Your Car</h2>
-        <form id="reservation_form" method="#">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+    <div id="about_container">
+        <div class="about_left">
+            <img src="resources/images/azoom_logo.png" alt="logo" width="100%">
+        </div>
 
-            <label for="car_select">Choose a Car:</label>
-            <select id="car_select" name="car_select">
-                <option value="Tesla Model 3">Tesla Model 3</option>
-                <option value="Nissan Leaf">Nissan Leaf</option>
-                <option value="Chevrolet Bolt">Chevrolet Bolt</option>
-            </select>
-
-            <label for="rental_period">Rental Period:</label>
-            <select id="rental_period" name="rental_period">
-                <option value="1-day">1 Day</option>
-                <option value="1-week">1 Week</option>
-                <option value="1-month">1 Month</option>
-            </select>
-
-            <label for="credit_card">Credit Card Number:</label>
-            <input type="text" id="credit_card" name="credit_card" required>
-
-            <button type="submit" class="btn">Submit Reservation</button>
-        </form>
-    </section>
-
-    
+        <div class="about_right">
+            <span>
+                <h1>About Us</h1>
+                <h2>Many different models and brands to choose from!</h2>
+                <p>All electrical cars ready for you at anytime, any place!</p>
+                <br>
+                <button class="btn" type="button">Find out more</button>
+            </span>
+        </div>
+    </div>
 
     <footer>
         <div id="footer_container">
@@ -123,32 +115,12 @@
                 </span>
             </span>
         </div>
-        
+
 
         <p id="copyright">&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
 
     <script>
-        document.getElementById("reservation_form").addEventListener("submit", function (event) {
-            const creditCard = document.getElementById("credit_card").value;
-
-            if (!validateCreditCard(creditCard)) {
-                alert("Please enter a valid credit card number.");
-                event.preventDefault(); // Prevent form submission
-            }
-            else {
-                alert("Thank you for reserving with us!");
-            }
-
-        });
-
-
-        function validateCreditCard(cardNumber) {
-            // Basic validation for a 16-digit credit card number
-            const regex = /^[0-9]{16}$/;
-            return regex.test(cardNumber);
-        }
-
         function hamburger() {
             var links = document.getElementById("links");
             var hamburger = document.getElementById("hamburger_icon");

@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     width: 1.5em;
 }
@@ -63,14 +67,17 @@ header {
     background-color: #333;
     padding: 20px 0;
     text-align: center;
+    
 }
 
 header .logo img {
     max-width: 150px;
+    
 }
 
 nav ul {
     list-style: none;
+    animation: fadeIn 2s 0.1s ease-out backwards;
 }
 
 nav ul li {
@@ -112,6 +119,7 @@ nav ul li a:hover {
     color: #fff;
     padding: 70px 20px;
     text-align: center;
+    animation: fadeIn 2s 0.1s ease-out backwards;
 }
 
 .banner h1 {
@@ -157,8 +165,7 @@ nav ul li a:hover {
     justify-content: space-around;
     overflow-x:scroll;
     overflow-y:hidden;
-    white-space: nowrap; 
-    
+    white-space: nowrap;
 }
 
 .car_item {
@@ -172,18 +179,7 @@ nav ul li a:hover {
     margin-bottom:20px;
     margin-left:20px;
     animation: scroll_right 15s linear infinite;
-    perspective: 700px;
-}
-
-@keyframes scroll_right {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-
-@media screen and (max-width: 768px) {
-    .car_item {
-        width:80%;
-    }
+    
 }
 
 .car_item img {
@@ -272,6 +268,65 @@ form button {
 
 form button:hover {
     background-color: #333;
+}
+
+/* About Us */
+#about_container {
+    margin: 7% 10%;
+    display:flex;
+    align-items: center;
+}
+
+.about_left {
+    width:45%;
+}
+
+.about_right {
+    float:right;
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.about_right span {
+    margin-left: 60px;
+}
+
+.about_right h1 {
+    color: #ff9800;
+    font-size:40px;
+    font-weight:600;
+}
+
+.about_right h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top:0;
+}
+
+.about_right p {
+    margin-top:1em;
+    font-size:20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about_left {
+        width:30%;
+    }
+    .about_right {
+        width: 70%;
+    }
+    .about_right h1 {
+        font-size:25px;
+    }
+    .about_right h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top:0;
+    }
+    .about_right p {
+        font-size:15px;
+    }
 }
 
 
@@ -389,6 +444,37 @@ footer {
     text-decoration: underline;
 }
 
+/* hide elements */
 .hidden {
     display:none;
+}
+
+/* animation keyframes */
+@keyframes scroll_right {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .car_item {
+        width:80%;
+    }
 }
