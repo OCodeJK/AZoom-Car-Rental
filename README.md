@@ -1,7 +1,7 @@
 <h1 align="center">AZoom Car Rental (Assignment 2)</h1>
 
 <div align="center">
-  [Live Site](https://ocodejk.github.io/AZoom-Car-Rental/)
+  [Live Site] (https://ocodejk.github.io/AZoom-Car-Rental/)
 </div>
 <br>
 
