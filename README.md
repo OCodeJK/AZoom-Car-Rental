@@ -4,6 +4,7 @@
   [Live Site](https://ocodejk.github.io/AZoom-Car-Rental/)
 </div>
 
+
 Assignment 2 Marking Criteria:
 
 1. Basic Design and Implementation of AZoom Website (HTML, CSS, JavaScript)
