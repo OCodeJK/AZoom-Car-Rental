@@ -371,7 +371,7 @@ footer {
     padding-bottom:10px;
 }
 
-@media screen and (max-width:412px) {
+@media screen and (max-width:500px) {
     #footer_left{
         display: none;
     }
@@ -382,6 +382,7 @@ footer {
     #footer_right p {
         text-align:center;
     }
+    
 }
 
 /* Login Page Styling */
