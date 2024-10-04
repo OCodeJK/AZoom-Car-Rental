@@ -18,8 +18,8 @@
         </div>
 
         <div id="hamburger_icon">
-        <a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"
-                style="font-size:70px; color:white"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"
+                    style="font-size:70px; color:white"></i></a>
         </div>
         <div id="cross_icon" class="hidden">
             <a href="javascript:void(0);" class="icon" onclick="cross()"><i class="fa fa-close"
@@ -30,7 +30,8 @@
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#cars">Cars</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="index.html#about_left">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +40,7 @@
     <section id="login">
         <div class="login_container">
             <h2>Login to AZoom</h2>
-            <form id="login_form" method="#">
+            <form id="login_form" method="POST">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
@@ -68,20 +69,22 @@
                 </span>
             </span>
         </div>
-        
+
 
         <p id="copyright">&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
 
     <script>
         document.getElementById("login_form").addEventListener("submit", function (event) {
-
             event.preventDefault();
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
 
             if (email && password) {
                 alert("Login Successful!");
+                window.location.assign("reservation.html");
+
             } else {
                 alert("Error, try again");
             }

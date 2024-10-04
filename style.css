@@ -39,7 +39,7 @@ a {
 
 
 #logo img {
-    width: 150px;
+    width: 250px;
     height: auto;
     transition: transform 0.3s ease;
     border-radius: 10px;
@@ -390,7 +390,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 55vh;
+    min-height: 70vh;
     background-color: #f0f0f0;
 }
 
@@ -402,6 +402,7 @@ footer {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    animation: fadeIn 2s 0.1s ease-out backwards;
 }
 
 .login_container h2 {
