@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +29,6 @@
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#cars">Cars</a></li>
-                <li><a href="#">Reserve</a></li>
                 <li><a href="returning.html">Returning</a></li>
                 <li><a href="index.html">Log Out</a></li>
                 <li><a href="#">About Us</a></li>
@@ -37,6 +37,7 @@
     </header>
 
     <section id="reservation">
+        
         <h2>Reserve Your Car</h2>
         <form id="reservation_form" method="#">
             <label for="name">Full Name:</label>
@@ -85,53 +86,6 @@
         <p id="copyright">&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById("reservation_form").addEventListener("submit", function (event) {
-            const creditCard = document.getElementById("credit_card").value;
-
-            if (!validateCreditCard(creditCard)) {
-                alert("Please enter a valid credit card number.");
-                event.preventDefault(); // Prevent form submission
-            }
-            else {
-                alert("Thank you for reserving with us!");
-            }
-
-        });
-
-
-        function validateCreditCard(cardNumber) {
-            // Basic validation for a 16-digit credit card number
-            const regex = /^[0-9]{16}$/;
-            return regex.test(cardNumber);
-        }
-
-        function hamburger() {
-            var links = document.getElementById("links");
-            var hamburger = document.getElementById("hamburger_icon");
-            var cross = document.getElementById("cross_icon");
-
-            if (links.style.display === "block") {
-                links.style.display = "none";
-            }
-            else {
-                links.style.display = "block";
-                hamburger.style.display = "none";
-                cross.style.display = "block";
-            }
-        }
-        function cross() {
-            var cross = document.getElementById("cross_icon");
-            var hamburger = document.getElementById("hamburger_icon");
-            var links = document.getElementById("links");
-
-            if (cross.style.display === "block") {
-                cross.style.display = "none";
-                hamburger.style.display = "block";
-                links.style.display = "none";
-            }
-        }
-    </script>
 </body>
 
 </html>
