@@ -396,7 +396,7 @@ footer {
 }
 
 /* Login Page Styling */
-#login {
+#login, #register {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,7 +404,7 @@ footer {
     background-color: #f0f0f0;
 }
 
-.login_container {
+.login_container, .register_container {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
@@ -415,17 +415,17 @@ footer {
 
 }
 
-.login_container h2 {
+.login_container h2, .register_container h2 {
     color: #f39c12;
     margin-bottom: 20px;
 }
 
-#login_form {
+#login_form, #register_form{
     display: flex;
     flex-direction: column;
 }
 
-#login_form label {
+#login_form label, #register_form label {
     font-size: 14px;
     margin-bottom: 8px;
     text-align: left;
@@ -433,7 +433,11 @@ footer {
 }
 
 
-.login_container p {
+.login_container p{ 
+    margin-top: 10px;
+}
+
+.register_container p {
     margin-top: 10px;
 }
 
@@ -442,7 +446,12 @@ footer {
     text-decoration: none;
 }
 
-.login_container a:hover {
+.register_container a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.login_container a:hover, .register_containers a:hover  {
     text-decoration: underline;
 }
 

@@ -25,27 +25,48 @@ function cross() {
     }
 }
 
+//Register-form retriever
+function registerUser() {
+    var user_register = document.getElementById("register_username").value;
+    var pass_register = document.getElementById("register_password").value;
+
+    localStorage.setItem('username', user_register);
+    localStorage.setItem('password', pass_register);
+
+    window.location.assign('reservation.html');
+}
 
 //Login-form retriever
-login = document.getElementById("login_form");
-login && login.addEventListener("submit", function (event){
-    event.preventDefault();
+function commenceLogin() {
+    login = document.getElementById("login_form");
+    login && login.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+        //Register form user credentials in Local Storage
+        var storedUsername = localStorage.getItem('username');
+        var storedPassword = localStorage.getItem('password');
 
-    if (username && password) {
-        alert("Login Successful!");
-        window.location.assign("reservation.html");
-    } else {
-        alert("Error, try again");
-    }
-});
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username == storedUsername || password == storedPassword) {
+            alert("Login Successful!");
+            window.location.assign("reservation.html");
+        } else {
+            alert('Incorrect credentials.')
+        }
+    });
+}
+
+function logOut(){
+    localStorage.clear();
+    window.location.assign('index.html');
+}
 
 
 //Reservation-form retriever
 reservation = document.getElementById("reseveration_form");
-reservation && reservation.addEventListener("submit", function (event){
+reservation && reservation.addEventListener("submit", function (event) {
     event.preventDefault();
     const creditCard = document.getElementById("credit_card").value;
 
