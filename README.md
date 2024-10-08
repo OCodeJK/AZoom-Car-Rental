@@ -32,6 +32,3 @@ In short - Marking Criteria:
 1. Functional implementation of Website for the Car Rental company
 2. Quality of User Interfaces design 
 3. Creative features of Website implementation (eg. CSS animation, hosting deployment, Mobile deployment, etc. )
-
-TODO:
-- [ ] Make a login form authethicate (hard-coded) reference (https://stackoverflow.com/questions/68439263/how-do-you-make-a-login-page-screen-with-html-which-only-has-one-correct-usernam)
