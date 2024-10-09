@@ -36,10 +36,16 @@
         </nav>
     </header>
 
+    <section id="home">
+        <div class="banner">
+            <h1>Reserving a Car is easy!</h1>
+            <p>Just follow this few steps.</p>
+        </div>
+    </section>
+
     <section id="reservation">
-        
         <h2>Reserve Your Car</h2>
-        <form id="reservation_form" method="#">
+        <form id="reservation_form">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -53,17 +59,19 @@
                 <option value="Chevrolet Bolt">Chevrolet Bolt</option>
             </select>
 
-            <label for="rental_period">Rental Period:</label>
-            <select id="rental_period" name="rental_period">
-                <option value="1-day">1 Day</option>
-                <option value="1-week">1 Week</option>
-                <option value="1-month">1 Month</option>
-            </select>
+            <label for="rental_start">Rental Start:</label>
+            <input type="datetime-local" id="rental_start" name="rental_start" required>
+
+            <label for="rental_end">Rental End:</label>
+            <input type="datetime-local" id="rental_end" name="rental_end" required>
 
             <label for="credit_card">Credit Card Number:</label>
             <input type="text" id="credit_card" name="credit_card" required>
 
-            <button type="submit" class="btn">Submit Reservation</button>
+            <label for="licence_number">License Number:</label>
+            <input type="text" id="licence_number" name="licence_number" required>
+
+            <button type="submit" class="btn">Reserve</button>
         </form>
     </section>
 

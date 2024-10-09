@@ -228,7 +228,8 @@ nav ul li a:hover {
 }
 
 
-/* Reservation Form and Return Form */
+/* Reservation, Report, Return Form */
+#report,
 #reservation,
 #returning {
     background-color: #fff;

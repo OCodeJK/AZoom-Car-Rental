@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Returning - AZoom Car Rental</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
     <script src="script.js" defer></script>
+    <title>File a Report - AZoom</title>
 </head>
-
 <body>
-
     <header>
         <div id="logo">
             <a href="index.html"><img src="resources/images/azoom_logo.png" alt="AZoom Car Rental Logo"></a>
         </div>
-
         <div id="hamburger_icon">
             <a href="javascript:void(0);" class="icon" onclick="hamburger()"><i class="fa fa-bars"
                     style="font-size:70px; color:white"></i></a>
@@ -30,38 +26,36 @@
         <nav>
             <ul id="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#cars">Cars</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="#" onclick="logOut()">Log Out</a></li>
-                <li><a href="#">About Us</a></li>
+                <li id="loginBtn"><a href="login.html">Login</a></li>
+                <li id="signupBtn"><a href="signup.html">Sign Up</a></li>
+                <li id="logoutBtn" class="hidden"><a href="#" onclick="logOut()">Log Out</a></li>
+                <li><a href="#about_container">About Us</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-    <div class="banner">
-        <h1>Returning a Car?</h1>
-        <p>Just follow this few steps.</p>
-    </div>
+        <div class="banner">
+            <h1>File a report</h1>
+            <p>Honesty is our most important policy</p>
+        </div>
     </section>
 
-    <section id="returning">
-        <h2>Returning of Cars</h2>
-        <form id="returning_form" method="#">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+    <section id="report">
+        <h2>Car Damage Check</h2>
+        <br>
+        <form id="report_form" enctype="multipart/form-data">
+            <label for="licence_number">Customer's Licence Number:</label>
+            <input type="text" id="licence_number" name="licence_number" pattern="[A-Za-z]{1}[0-9]{7}[A-Za-z]{1}" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+            <!-- allow employee to put image of damage car if there is -->
+            <label for="car_damage_image">Submit image for Prove:</label>
+            <input type="file" id="car_damage_image" name="car_damage_image" accept="image/*">
 
-            <label for="car_park">Pick a Carpark:</label>
-            <select id="car_park" name="car_park">
-                <option value="car_park1">Car Park 1</option>
-                <option value="car_park2">Car Park 2</option>
-                <option value="car_park3">Car Park 3</option>
-            </select>
+            <!-- Image preview -->
+            <img id="preview" class="hidden" src="#" alt="Image Preview" width="600" height="600">
 
-            <button type="submit" class="btn">Return</button>
+            <button type="submit" class="btn">Report</button>
         </form>
 
     </section>
@@ -80,10 +74,9 @@
                 </span>
             </span>
         </div>
-        
+
 
         <p id="copyright">&copy; 2024 AZoom Car Rental. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
