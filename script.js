@@ -186,7 +186,9 @@ reservation && reservation.addEventListener("submit", function (event) {
     const carModel = document.getElementById("car_select").value;
 
     //concatenating every info to put into the txt file receipt
-    let receipt = "AZoom Car Rental Receipt"+ "\n" //title 
+    let receipt = "AZoom Car Rental Receipt"
+        + "\n"
+        + "\n"
         + "Licence Number: " + licenceNo + "\n" //Licence Number of the user
         + "Credit-Card: ************" + creditCard.substr(creditCard.length - 4) + "\n" //Credit card info
         + "Name: " + name + "\n" //Name
@@ -233,8 +235,11 @@ report && report.addEventListener("submit", function(event){
     licenceNumber = document.getElementById("licence_number").value;
     imageString = imageInput.value;
 
-    let final_report = "Employee Report Submission" + "\n" 
-    + "Licence Number: *****" //concat together licence number and photo evidence
+    //concat together licence number and photo evidence
+    let final_report = "Employee Report Submission" 
+    + "\n"
+    + "\n" 
+    + "Licence Number: *****"
     + licenceNumber.substr(licenceNumber.length - 4) + "\n" 
     + "Photo Evidence: " + imageString; 
 
@@ -249,17 +254,20 @@ report && report.addEventListener("submit", function(event){
 });
 
 // Function to handle image selection and preview
-imageInput.addEventListener("change", function() {
-    const file = this.files[0]; // Get the selected file
-    if (file) {
-        const reader = new FileReader(); // Create a FileReader
+try {
+    imageInput.addEventListener("change", function() {
+        const file = this.files[0]; // Get the selected file
+        if (file) {
+            const reader = new FileReader(); // Create a FileReader
+    
+            reader.onload = function(e) {
+                // Set the preview image src to the file's data URL
+                preview.src = e.target.result;
+                preview.style.display = "block"; // Show the preview image
+            };
+    
+            reader.readAsDataURL(file); // Read the file as a Data URL
+        }
+    });
+} catch (TypeError) {}
 
-        reader.onload = function(e) {
-            // Set the preview image src to the file's data URL
-            preview.src = e.target.result;
-            preview.style.display = "block"; // Show the preview image
-        };
-
-        reader.readAsDataURL(file); // Read the file as a Data URL
-    }
-});
