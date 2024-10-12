@@ -25,7 +25,7 @@ function cross() {
     }
 }
 
-
+//permanent admin account in localStorage (to simulate employee account being set up.)
 localStorage.setItem('admin_username', "admin");
 localStorage.setItem('admin_password', "admin123");
 
@@ -91,7 +91,6 @@ function commenceLogin() {
     });
 }
 
-//Permanent login for now because admin_username is in localStorage on start up
 function checkLoginStatus() {
     //check if the key "username" is in localStorage
     try {
@@ -113,17 +112,11 @@ function checkLoginStatus() {
             const loginBtn = document.getElementById("loginBtn");
             const signupBtn = document.getElementById("signupBtn");
             const logoutBtn = document.getElementById("logoutBtn");
-            const reservationBtn = document.getElementById("reservationBtn");
-            const returningBtn = document.getElementById("returningBtn");
-            const fileReportBtn = document.getElementById("fileReportBtn");
 
             loginBtn.classList.add("hidden");
             signupBtn.classList.add("hidden");
 
             logoutBtn.classList.remove("hidden");
-            reservationBtn.classList.remove("hidden");
-            returningBtn.classList.remove("hidden");
-            fileReportBtn.classList.remove("hidden");
         }
     } catch (TypeError) {}
 
