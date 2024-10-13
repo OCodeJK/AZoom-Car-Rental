@@ -76,7 +76,7 @@ function commenceLogin() {
 
         //Authentication
         if (username == storedUsername || password == storedPassword) {
-            alert("Login Successful! Welcome back," + username);
+            alert("Login Successful! Welcome back, " + username);
             window.location.assign("index.html");
             localStorage.setItem('isLoggedIn', true);
 
@@ -100,9 +100,11 @@ function checkLoginStatus() {
             const logoutBtn = document.getElementById("logoutBtn");
             const reservationBtn = document.getElementById("reservationBtn");
             const returningBtn = document.getElementById("returningBtn");
+            const reserveLoginBtn = document.getElementById("reserveBtn");
 
             loginBtn.classList.add("hidden");
             signupBtn.classList.add("hidden");
+            reserveLoginBtn.classList.add("hidden");
 
             logoutBtn.classList.remove("hidden");
             reservationBtn.classList.remove("hidden");
