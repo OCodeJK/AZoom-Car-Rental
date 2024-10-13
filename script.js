@@ -1,3 +1,4 @@
+//<-- NAV BAR HAMBURGER -->//
 function hamburger() {
     var links = document.getElementById("links");
     var hamburger = document.getElementById("hamburger_icon");
@@ -24,12 +25,13 @@ function cross() {
         links.style.display = "none";
     }
 }
+//<-- END OF NAV BAR HAMBURGER -->//
 
 //permanent admin account in localStorage (to simulate employee account being set up.)
 localStorage.setItem('admin_username', "admin");
 localStorage.setItem('admin_password', "admin123");
 
-//Register-form retriever
+//<-- REGISTER FORM SECTION -->//
 function registerUser() {
     var user_register = document.getElementById("register_username").value;
     var pass_register = document.getElementById("register_password").value;
@@ -51,8 +53,8 @@ function registerUser() {
             window.location.assign('reservation.html');
         }
     });
-
 }
+//<-- END OF REGISTER FORM SECTION -->//
 
 
 
@@ -110,15 +112,6 @@ function checkLoginStatus() {
             reservationBtn.classList.remove("hidden");
             returningBtn.classList.remove("hidden");
 
-        } else if ("admin_username" in localStorage && localStorage.getItem('isLoggedIn') == 'true') {
-            const loginBtn = document.getElementById("loginBtn");
-            const signupBtn = document.getElementById("signupBtn");
-            const logoutBtn = document.getElementById("logoutBtn");
-
-            loginBtn.classList.add("hidden");
-            signupBtn.classList.add("hidden");
-
-            logoutBtn.classList.remove("hidden");
         }
     } catch (TypeError) {}
 
@@ -190,17 +183,6 @@ reservation && reservation.addEventListener("submit", function (event) {
         + "Car Model: " + carModel; //Car Model
 
 
-    function validateCreditCard(cardNumber) {
-        // Basic validation for a 16-digit credit card number
-        const regex = /^[0-9]{16}$/;
-        return regex.test(cardNumber);
-    }
-
-    function validateLicenseCard(cardNumber) {
-        //Basic validation for 9 alphanumeric license number
-        const regex = /^[A-Za-z]{1}[0-9]{7}[A-Za-z]{1}$/;
-        return regex.test(cardNumber);
-    }
 
     if (!validateCreditCard(creditCard)) {
         alert("Please enter a valid credit card number.");
@@ -210,15 +192,27 @@ reservation && reservation.addEventListener("submit", function (event) {
         let blobdtMIME = new Blob([receipt], { type: "text/plain" });
         let url = URL.createObjectURL(blobdtMIME);
         let anele = document.createElement("a");
-        anele.setAttribute("download", "Reservation_Receipt");
+        anele.setAttribute("download", "Receipt_"+ licenceNo.substr(licenceNo.length - 4));
         anele.href = url;
         anele.click();
         alert("Thank you for reserving with us!");
     }
 });
-//END OF RESERVATION FORM
 
-// REPORT FORM SECTION
+function validateCreditCard(cardNumber) {
+    // Basic validation for a 16-digit credit card number
+    const regex = /^[0-9]{16}$/;
+    return regex.test(cardNumber);
+}
+
+function validateLicenseCard(cardNumber) {
+    //Basic validation for 9 alphanumeric license number
+    const regex = /^[A-Za-z]{1}[0-9]{7}[A-Za-z]{1}$/;
+    return regex.test(cardNumber);
+}
+//<---  END OF RESERVATION FORM PORTION --->//
+
+//<---  REPORT FORM SECTION --->//
 const imageInput = document.getElementById("car_damage_image");
 const preview = document.getElementById("preview");
 
@@ -240,7 +234,7 @@ report && report.addEventListener("submit", function(event){
     let blobdtMIME = new Blob([final_report], { type: "text/plain" });
     let url = URL.createObjectURL(blobdtMIME);
     let anele = document.createElement("a");
-    anele.setAttribute("download", "Report_*****"+ licenceNumber.substr(licenceNumber.length - 4));
+    anele.setAttribute("download", "Report_"+ licenceNumber.substr(licenceNumber.length - 4));
     anele.href = url;
     anele.click();
     alert("Report Submitted.");
@@ -264,4 +258,14 @@ try {
         }
     });
 } catch (TypeError) {}
+//<---  END OF REPORT FORM SECTION --->//
 
+//<--- RETURN FORM SECTION --->//
+returningForm = document.getElementById("returning_form");
+returningForm && returningForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    alert("Thank you for reserving with us!");
+    window.location.assign("index.html");
+})
+//<--- END OF RETURN FORM SECTION --->//
